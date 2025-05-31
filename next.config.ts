@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     domains: [
       "img.freepik.com",
       "www.qalamkar.com.pk",
+      "readymadeui.com",
       "www.readymadeui.com/images/visa.webp",
     ], // এখানে "www" ঠিক রাখতে হবে
   },
