@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={josefin.variable}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={josefin.variable}>{children}</body>
     </html>
   );
 }

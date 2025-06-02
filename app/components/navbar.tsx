@@ -5,22 +5,33 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FaBell, FaFacebook, FaInstagram } from "react-icons/fa";
 import HeadSlider from "./HeadSlider";
 
+const menuItems = [
+  { label: "New Arrivals", href: "#" },
+  { label: "QPRINTS", href: "#" },
+  { label: "Alisha Noor", href: "#", special: true }, // special = centered, bold, bigger font
+  { label: "Woman", href: "#" },
+  { label: "Man", href: "#" },
+  { label: "SALe", href: "#" },
+];
+
 const Navbar = () => {
   return (
-    <div className="">
+    <div>
       {/* Top Bar */}
-      <section className="py-3  bg-black text-white text-center px-10">
+      <section className="py-3 bg-black text-white text-center px-10">
         <HeadSlider />
       </section>
+
       {/* Social Bar */}
       <section className="flex border-b border-gray-300 items-center justify-end gap-3 py-2 text-right px-10">
         <FaInstagram size={16} />
         <FaFacebook size={16} />
         <FaBell size={16} />
       </section>
-      <header className=" bg-white tracking-wide relative z-50 max-w-[1500px] mx-auto">
+
+      <header className="sticky top-0 bg-white tracking-wide z-50 max-w-[1500px] mx-auto ">
         {/* Main Navbar */}
-        <section className="flex items-center justify-between py-11 px-4 sm:px-10 min-h-[70px] ">
+        <section className="flex items-center justify-between py-11 px-4 sm:px-10 min-h-[70px]">
           {/* Left: Search Icon */}
           <div className="flex items-center">
             <button className="cursor-pointer">
@@ -37,33 +48,32 @@ const Navbar = () => {
 
           {/* Middle: Menu Items */}
           <ul className="flex items-center space-x-10 uppercase">
-            <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">
-              <Link href="#">New Arrivals</Link>
-            </li>
-
-            <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">
-              <Link href="#">QPRINTS</Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-pink-600 text-slate-900 text-3xl uppercase font-extrabold"
-              >
-                Alisha Noor
-              </Link>
-            </li>
-            <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">
-              <Link href="#">Woman</Link>
-            </li>
-            <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">
-              <Link href="#">Man</Link>
-            </li>
-            <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">
-              <Link href="#">SALe</Link>
-            </li>
+            {menuItems.map(({ label, href, special }, idx) => {
+              if (special) {
+                // Centered big logo item
+                return (
+                  <li key={idx}>
+                    <Link
+                      href={href}
+                      className="hover:text-pink-600 text-slate-900 text-3xl uppercase font-extrabold"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              }
+              return (
+                <li
+                  key={idx}
+                  className="relative text-slate-900 text-[15px] hover:text-black link-underline"
+                >
+                  <Link href={href}>{label}</Link>
+                </li>
+              );
+            })}
           </ul>
 
-          {/* Right: Add to Cart Button */}
+          {/* Right: Icons */}
           <div className="flex items-center gap-4">
             <IoPersonOutline size={24} />
             <HiOutlineShoppingBag size={24} />
