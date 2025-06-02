@@ -3,16 +3,14 @@ import React from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FaBell, FaFacebook, FaInstagram } from "react-icons/fa";
+import HeadSlider from "./HeadSlider";
 
 const Navbar = () => {
   return (
     <div className="">
       {/* Top Bar */}
       <section className="py-3  bg-black text-white text-center px-10">
-        <p className="text-sm">
-          STITCHED ORDERS OF QPRINTS WILL BE DISPATCHED AFTER EID ACCORDING TO
-          THE DELIVERY TIMELINE OF STITCHED PRODUCT
-        </p>
+        <HeadSlider />
       </section>
       {/* Social Bar */}
       <section className="flex border-b border-gray-300 items-center justify-end gap-3 py-2 text-right px-10">
@@ -51,7 +49,7 @@ const Navbar = () => {
                 href="#"
                 className="hover:text-pink-600 text-slate-900 text-3xl uppercase font-extrabold"
               >
-                qalamkar
+                Alisha Noor
               </Link>
             </li>
             <li className="relative text-slate-900 text-[15px] hover:text-black link-underline">

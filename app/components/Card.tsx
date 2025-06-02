@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> = ({ image, hoverImage, name, price }) => {
     <div>
       <div className="bg-white flex flex-col rounded-sm overflow-hidden  relative group">
         <a href="#" className="block">
-          <div className="w-full relative aspect-[15/24]">
+          <div className="w-full relative aspect-[17/24]">
             {/* Default Image */}
             <Image
               src={image}
