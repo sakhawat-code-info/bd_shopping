@@ -8,11 +8,17 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ image }) => {
   return (
-    <div className="relative h-screen w-full">
-      {/* Banner Image */}
-      <Image src={image} alt="Banner Image" fill className="object-fill" />
+    <div className="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-screen">
+      <Image
+        src={image}
+        alt="Banner Image"
+        fill
+        className="object-fill"
+        priority
+      />
+      {/* Optional Text on Banner */}
       {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-        MY picture
+        MY Picture
       </h1> */}
     </div>
   );

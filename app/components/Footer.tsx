@@ -1,4 +1,4 @@
-"use client"; // optional, only needed if you plan to use client-side interactivity
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { FaBell, FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="bg-gray-100 px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-300">
-      <div className="max-w-[1500px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="max-w-[1500px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center sm:text-left">
         {/* SUPPORT */}
         <div>
           <h3 className="text-sm text-gray-900 font-semibold mb-4">SUPPORT</h3>
@@ -55,7 +55,7 @@ const Footer = () => {
               <p>Subscribe to get special updates & offers.</p>
             </li>
             <li>
-              <div className="relative flex items-center">
+              <div className="relative flex flex-col sm:flex-row items-center">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -65,7 +65,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#bbb"
                   stroke="#bbb"
-                  className="w-[20px] h-[20px] absolute right-4"
+                  className="w-[20px] h-[20px] absolute right-4 sm:static sm:ml-[-24px] mt-2 sm:mt-0"
                   viewBox="0 0 682.667 682.667"
                 >
                   <defs>
@@ -89,7 +89,7 @@ const Footer = () => {
               </div>
             </li>
             <li>
-              <div className="flex gap-3 py-2 text-right">
+              <div className="flex gap-3 justify-center sm:justify-start py-2">
                 <FaInstagram size={20} />
                 <FaFacebook size={20} />
                 <FaBell size={20} />
@@ -101,27 +101,25 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
-        <div className="flex items-center justify-center mb-3">
-          <div className="ml-4 flex gap-2 cursor-pointer">
-            <Image
-              src="https://readymadeui.com/images/visa.webp"
-              width={32}
-              height={20}
-              alt="Visa"
-            />
-            <Image
-              src="https://readymadeui.com/images/american-express.webp"
-              width={32}
-              height={20}
-              alt="American Express"
-            />
-            <Image
-              src="https://readymadeui.com/images/master.webp"
-              width={32}
-              height={20}
-              alt="MasterCard"
-            />
-          </div>
+        <div className="flex flex-wrap items-center justify-center mb-3 gap-3">
+          <Image
+            src="https://readymadeui.com/images/visa.webp"
+            width={32}
+            height={20}
+            alt="Visa"
+          />
+          <Image
+            src="https://readymadeui.com/images/american-express.webp"
+            width={32}
+            height={20}
+            alt="American Express"
+          />
+          <Image
+            src="https://readymadeui.com/images/master.webp"
+            width={32}
+            height={20}
+            alt="MasterCard"
+          />
         </div>
         <p className="text-sm text-slate-600">
           &copy; 2025 Asraf Bhai. ALL RIGHTS RESERVED.
