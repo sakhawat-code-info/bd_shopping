@@ -22,7 +22,7 @@ const CarouselComponents = () => {
         ]}
       >
         <CarouselContent>
-          <CarouselItem className="relative">
+          <CarouselItem className="relative min-h-screen">
             {" "}
             <Banner
               image={
