@@ -20,7 +20,7 @@ const Navbar = () => {
       </section>
       <header className=" bg-white tracking-wide relative z-50 max-w-[1500px] mx-auto">
         {/* Main Navbar */}
-        <section className="flex items-center justify-between py-10 px-4 sm:px-10 min-h-[70px] ">
+        <section className="flex items-center justify-between py-11 px-4 sm:px-10 min-h-[70px] ">
           {/* Left: Search Icon */}
           <div className="flex items-center">
             <button className="cursor-pointer">

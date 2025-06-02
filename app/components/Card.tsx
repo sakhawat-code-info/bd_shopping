@@ -32,14 +32,14 @@ const Card: React.FC<CardProps> = ({ image, hoverImage, name, price }) => {
               className="object-cover object-top absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
 
-            <div className="absolute bottom-5 w-full flex items-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            {/* <div className="absolute bottom-5 w-full flex items-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
               <button
                 type="button"
                 className="cursor-pointer max-w-[88%] mx-auto text-sm px-2 py-2 font-medium w-full bg-black text-white tracking-wide outline-none border-none rounded-sm"
               >
                 Add to cart
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className="p-4 text-center">
