@@ -51,6 +51,12 @@ const Navbar = () => {
               )}
             </button>
 
+            <div className="">
+              <h1 className="block sm:hidden text-2xl lg:text-3xl font-extrabold text-slate-900 hover:text-pink-600">
+                Alisha Noor
+              </h1>
+            </div>
+
             {/* Search Icon */}
             <button className="hidden sm:block cursor-pointer">
               <svg
@@ -81,7 +87,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
           {/* Right: Icons */}
           <div className="flex items-center gap-4">
             <IoPersonOutline size={22} />
@@ -90,27 +95,42 @@ const Navbar = () => {
         </section>
 
         {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="sm:hidden px-4 pb-4">
-            <ul className="flex flex-col gap-4 uppercase text-sm text-gray-700">
-              {menuItems.map(({ label, href, special }, idx) => (
-                <li key={idx}>
+        <div
+          className={`sm:hidden fixed inset-0 z-50 transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* Overlay (optional, for dark background behind menu) */}
+          <div
+            className="absolute inset-0 bg-white opacity-40"
+            onClick={() => setMenuOpen(false)}
+          ></div>
+
+          {/* Side Drawer */}
+          <div className="w-[90%] max-w-sm h-full bg-white shadow-lg transform transition-transform duration-300">
+            <div className="flex flex-col p-6 gap-6 uppercase text-sm text-black">
+              <button
+                className="self-end text-black"
+                onClick={() => setMenuOpen(false)}
+              >
+                <RxCross2 size={24} />
+              </button>
+
+              {menuItems
+                .filter((item) => !item.special) // special item বাদ দিচ্ছি
+                .map(({ label, href }, idx) => (
                   <Link
+                    key={idx}
                     href={href}
-                    className={`block ${
-                      special
-                        ? "text-xl font-bold text-slate-900"
-                        : "hover:text-black"
-                    }`}
+                    className="block text-black"
                     onClick={() => setMenuOpen(false)}
                   >
                     {label}
                   </Link>
-                </li>
-              ))}
-            </ul>
+                ))}
+            </div>
           </div>
-        )}
+        </div>
       </header>
     </div>
   );
