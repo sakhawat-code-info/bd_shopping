@@ -4,6 +4,12 @@ import ViewAllButton from "@/app/components/ViewAllButton";
 import Image from "next/image";
 import { BsTruck } from "react-icons/bs";
 import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ViewDetails: React.FC = () => {
   const thumbnails = [
@@ -164,32 +170,82 @@ const ViewDetails: React.FC = () => {
 
             {/* Description */}
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-slate-900">
-                Product Description
-              </h3>
-              <p className="text-sm text-slate-500 mt-4">
-                Elevate your casual style with our premium men t-shirt. Crafted
-                for comfort and designed with a modern fit, this versatile shirt
-                is an essential addition to your wardrobe.
-              </p>
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full"
+                defaultValue="item-1"
+              >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    <h3 className="text-xl text-slate-900">
+                      Product Description
+                    </h3>
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p className="text-sm text-slate-500 mt-4">
+                      Elevate your casual style with our premium men t-shirt.
+                      Crafted for comfort and designed with a modern fit, this
+                      versatile shirt is an essential addition to your wardrobe.
+                    </p>
 
-              <ul className="space-y-3 list-disc mt-4 pl-4 text-sm text-slate-500">
-                <li>
-                  A t-shirt is a wardrobe essential because it is so versatile.
-                </li>
-                <li>
-                  Available in a wide range of sizes, from extra small to extra
-                  large, and even in tall and petite sizes.
-                </li>
-                <li>
-                  This is easy to care for. They can usually be machine-washed
-                  and dried on low heat.
-                </li>
-                <li>
-                  You can add your own designs, paintings, or embroidery to make
-                  it your own.
-                </li>
-              </ul>
+                    <ul className="space-y-3 list-disc mt-4 pl-4 text-sm text-slate-500">
+                      <li>
+                        A t-shirt is a wardrobe essential because it is so
+                        versatile.
+                      </li>
+                      <li>
+                        Available in a wide range of sizes, from extra small to
+                        extra large, and even in tall and petite sizes.
+                      </li>
+                      <li>
+                        This is easy to care for. They can usually be
+                        machine-washed and dried on low heat.
+                      </li>
+                      <li>
+                        You can add your own designs, paintings, or embroidery
+                        to make it your own.
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>
+                    <h3 className="text-xl text-slate-900">Shipping Details</h3>
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance items-center justify-center">
+                    <ul>
+                      <li className="flex gap-12">
+                        <span>Pakistan delivery time period</span>
+                        <span>2-4 Days for unstitched pret</span>
+                      </li>
+                      <li className="flex gap-12">
+                        <span> Pakistan delivery time period</span>
+                        <span>30 Days&nbsp;for stitched</span>
+                      </li>
+
+                      <li className="flex gap-12">
+                        Couture and Hand Luxe orders will take 8-10 weeks
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>
+                    <h3 className="text-xl text-slate-900">Return Policy </h3>
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      Product color may slightly vary due to photographic
+                      lighting sources or your monitor settings.
+                    </p>
+                    <p>
+                      Stitched orders cannot be processed through Cash on
+                      Delivery.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>
