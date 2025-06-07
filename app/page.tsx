@@ -2,6 +2,7 @@
 
 import Card from "./components/Card";
 import CarouselComponents from "./components/CarouselComponents";
+import SectionHeading from "./components/SectionHeading";
 import ViewAllButton from "./components/ViewAllButton";
 
 export default function Home() {
@@ -38,12 +39,8 @@ export default function Home() {
       <CarouselComponents />
 
       <main className="px-4 sm:px-6 lg:px-8 mx-auto max-w-screen-xl">
-        <div className="flex justify-center items-center my-10">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">
-            QALAMKAR LAWN 2025
-          </h1>
-        </div>
-
+        {/* main section  */}
+        <SectionHeading title="QALAMKAR LAWN 2025" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {cards.concat(cards).map((card, index) => (
             <Card
@@ -56,7 +53,6 @@ export default function Home() {
             />
           ))}
         </div>
-
         <div className="flex justify-center my-10">
           <div className="w-[150px]">
             <ViewAllButton
@@ -66,6 +62,37 @@ export default function Home() {
               borderColor="border border-black"
             />
           </div>
+        </div>
+
+        {/* NEW ARRIVALS */}
+        <div className="mt-32">
+          <SectionHeading title="NEW ARRIVALS" />
+        </div>
+        <div className="flex justify-center mb-12">
+          <div className="w-[150px]">
+            <ViewAllButton
+              displayText="View All"
+              bgColor="bg-white"
+              textColor="text-black"
+              borderColor="border border-black"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          {cards
+            .concat(cards)
+            .slice(0, 4)
+            .map((card, index) => (
+              <Card
+                id="1"
+                key={index}
+                image={card.image}
+                hoverImage={card.hoverImage}
+                name={card.name}
+                price={card.price}
+              />
+            ))}
         </div>
       </main>
     </div>
