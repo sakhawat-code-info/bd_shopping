@@ -13,12 +13,12 @@ import {
 
 const ViewDetails: React.FC = () => {
   const thumbnails = [
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8065_4793dcda-3928-4ff8-b745-8638ba009bb3_720x.jpg?v=1747912104",
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8131_a7084803-a5e3-4b65-87ec-0ec2db1fd5c8_720x.jpg?v=1747912112",
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8131_a7084803-a5e3-4b65-87ec-0ec2db1fd5c8_720x.jpg?v=1747912112",
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8131_a7084803-a5e3-4b65-87ec-0ec2db1fd5c8_720x.jpg?v=1747912112",
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8131_a7084803-a5e3-4b65-87ec-0ec2db1fd5c8_720x.jpg?v=1747912112",
-    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8131_a7084803-a5e3-4b65-87ec-0ec2db1fd5c8_720x.jpg?v=1747912112",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8929_copy_1800x1800.jpg?v=1747912506",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8887copy_1800x1800.jpg?v=1747912506",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8847copy_1800x1800.jpg?v=1747912506",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8918copy_1800x1800.jpg?v=1747912506",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_9130copy_09b12b93-f8e7-460a-be22-aaba00485ced_1800x1800.jpg?v=1747912506",
+    "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8932copy_1800x1800.jpg?v=1747912506",
   ];
 
   const [mainImage, setMainImage] = useState(thumbnails[0]);
