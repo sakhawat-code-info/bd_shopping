@@ -2,20 +2,22 @@
 
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface CardProps {
+  id: string;
   image: string | StaticImport;
   hoverImage: string | StaticImport;
   name: string;
   price: string;
 }
 
-const Card: React.FC<CardProps> = ({ image, hoverImage, name, price }) => {
+const Card: React.FC<CardProps> = ({ id, image, hoverImage, name, price }) => {
   return (
     <div>
       <div className="bg-white flex flex-col rounded-sm overflow-hidden  relative group">
-        <a href="#" className="block">
+        <Link href={`/ViewDetails/${id}`} className="block">
           <div className="w-full relative aspect-[17/24]">
             {/* Default Image */}
             <Image
@@ -50,7 +52,7 @@ const Card: React.FC<CardProps> = ({ image, hoverImage, name, price }) => {
               <h6 className="text-sm sm:text-base text-slate-900">{price}</h6>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

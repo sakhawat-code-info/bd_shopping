@@ -2,8 +2,6 @@
 
 import Card from "./components/Card";
 import CarouselComponents from "./components/CarouselComponents";
-import Footer from "./components/Footer";
-import Navbar from "./components/navbar";
 import ViewAllButton from "./components/ViewAllButton";
 
 export default function Home() {
@@ -37,7 +35,6 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <Navbar />
       <CarouselComponents />
 
       <main className="px-4 sm:px-6 lg:px-8 mx-auto max-w-screen-xl">
@@ -50,6 +47,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {cards.concat(cards).map((card, index) => (
             <Card
+              id="1"
               key={index}
               image={card.image}
               hoverImage={card.hoverImage}
@@ -60,11 +58,14 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center my-10">
-          <ViewAllButton />
+          <ViewAllButton
+            displayText="See All"
+            bgColor="bg-black"
+            textColor="text-white"
+            borderColor="border border-black"
+          />
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

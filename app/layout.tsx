@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
-
-// app/layout.tsx
 import { Josefin_Sans } from "next/font/google";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
+
+// ✅ Import Navbar and Footer
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // দরকার হলে অন্য weight-ও যুক্ত করতে পারেন
+  weight: ["400", "500", "600", "700"],
   variable: "--font-josefin",
 });
 
@@ -23,7 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={josefin.variable}>{children}</body>
+      <body className={josefin.variable}>
+        <Navbar /> {/* ✅ Navbar at the top */}
+        {children}
+        <Footer /> {/* ✅ Footer at the bottom */}
+      </body>
     </html>
   );
 }
