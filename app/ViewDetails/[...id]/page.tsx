@@ -53,9 +53,7 @@ const ViewDetails: React.FC = () => {
             {/* Main Image */}
             <div className="flex-1 overflow-hidden">
               <Image
-                src={
-                  "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8065_4793dcda-3928-4ff8-b745-8638ba009bb3_720x.jpg?v=1747912104"
-                }
+                src={mainImage}
                 alt="Main Product"
                 width={500}
                 height={800}
