@@ -58,12 +58,14 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center my-10">
-          <ViewAllButton
-            displayText="See All"
-            bgColor="bg-black"
-            textColor="text-white"
-            borderColor="border border-black"
-          />
+          <div className="w-[150px]">
+            <ViewAllButton
+              displayText="See All"
+              bgColor="bg-black"
+              textColor="text-white"
+              borderColor="border border-black"
+            />
+          </div>
         </div>
       </main>
     </div>

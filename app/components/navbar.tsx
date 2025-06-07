@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FaBell, FaFacebook, FaInstagram } from "react-icons/fa";
@@ -19,6 +19,16 @@ const menuItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // scrollY > 50 হলে top-0 হবে
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
@@ -35,7 +45,11 @@ const Navbar = () => {
       </section>
 
       {/* Navbar */}
-      <header className="sticky top-0 bg-white tracking-wide z-50 max-w-[1500px] mx-auto ">
+      <header
+        className={`fixed left-0 w-full z-50 transition-all duration-300 ${
+          scrolled ? "top-0 shadow-md" : "top-[67px]"
+        } bg-white`}
+      >
         <section className="flex items-center justify-between py-11 px-4 sm:px-10 min-h-[70px]">
           {/* Left: Search / Hamburger */}
           <div className="flex items-center gap-4">
