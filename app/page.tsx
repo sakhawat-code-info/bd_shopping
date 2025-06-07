@@ -3,6 +3,7 @@
 import Card from "./components/Card";
 import CarouselComponents from "./components/CarouselComponents";
 import SectionHeading from "./components/SectionHeading";
+import VideoBanner from "./components/VideoBanner";
 import ViewAllButton from "./components/ViewAllButton";
 
 export default function Home() {
@@ -95,6 +96,10 @@ export default function Home() {
             ))}
         </div>
       </main>
+      {/* video section  */}
+      <div className="my-28">
+        <VideoBanner videoSrc="/videos/videoBanner.mp4" />
+      </div>
     </div>
   );
 }

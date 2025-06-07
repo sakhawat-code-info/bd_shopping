@@ -8,7 +8,7 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ image }) => {
   return (
-    <div className="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-screen">
+    <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[60vh] lg:h-[70vh]">
       <Image
         src={image}
         alt="Banner Image"
