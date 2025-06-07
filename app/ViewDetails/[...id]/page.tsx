@@ -24,7 +24,7 @@ const ViewDetails: React.FC = () => {
   const [mainImage, setMainImage] = useState(thumbnails[0]);
 
   return (
-    <div>
+    <div className="mt-24">
       <div className="flex items-start justify-center mb-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1200px] w-full gap-4 mt-10">
           {/* Left side (Thumbnail + Main Image) */}

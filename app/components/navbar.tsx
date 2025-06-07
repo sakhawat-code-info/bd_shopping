@@ -11,7 +11,7 @@ import HeadSlider from "./HeadSlider";
 const menuItems = [
   { label: "New Arrivals", href: "#" },
   { label: "QPRINTS", href: "#" },
-  { label: "Alisha Noor", href: "#", special: true },
+  { label: "Alisha Noor", href: "/", special: true },
   { label: "Woman", href: "#" },
   { label: "Man", href: "#" },
   { label: "SALE", href: "#" },

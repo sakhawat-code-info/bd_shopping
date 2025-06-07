@@ -32,11 +32,35 @@ export default function Home() {
       name: "EM-10 (A) RILEY",
       price: "from Rs.6,590",
     },
+    {
+      image:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_9579copy_1800x1800.jpg?v=1747843470",
+      hoverImage:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_9419copy_1800x1800.jpg?v=1747843470",
+      name: "EM-10 (A) RILEY",
+      price: "from Rs.6,590",
+    },
+    {
+      image:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8929_copy_1800x1800.jpg?v=1747912506",
+      hoverImage:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8887copy_1800x1800.jpg?v=1747912506",
+      name: "EM-10 (A) RILEY",
+      price: "from Rs.6,590",
+    },
+    {
+      image:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8667_1800x1800.jpg?v=1747846657",
+      hoverImage:
+        "https://www.qalamkar.com.pk/cdn/shop/files/IMG_8639copy_1800x1800.jpg?v=1747912516",
+      name: "EM-10 (A) RILEY",
+      price: "from Rs.6,590",
+    },
     // repeat cards if you want
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full lg:mt-[124px]">
       <CarouselComponents />
 
       <main className="px-4 sm:px-6 lg:px-8 mx-auto max-w-screen-xl">
@@ -99,6 +123,30 @@ export default function Home() {
       {/* video section  */}
       <div className="my-28">
         <VideoBanner videoSrc="/videos/videoBanner.mp4" />
+      </div>
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-screen-xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {cards.concat(cards).map((card, index) => (
+            <Card
+              id="1"
+              key={index}
+              image={card.image}
+              hoverImage={card.hoverImage}
+              name={card.name}
+              price={card.price}
+            />
+          ))}
+        </div>
+        <div className="flex justify-center mt-10 mb-16">
+          <div className="w-[150px]">
+            <ViewAllButton
+              displayText="View All"
+              bgColor="bg-black"
+              textColor="text-white"
+              borderColor="border border-black"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
